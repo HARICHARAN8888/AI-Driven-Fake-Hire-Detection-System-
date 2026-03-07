@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 54% 6%; /* #070718 approx */
+    --foreground: 240 10% 90%;
+    
+    --primary: 245 100% 69%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 191 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --destructive: 349 100% 65%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 158 100% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 10% 70%;
+    
+    --border: 245 100% 69%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground bg-cyber-gradient min-h-screen text-[#EAEAF0];
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(108, 99, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-glow {
+  border: 1px solid rgba(108, 99, 255, 0.35);
+  box-shadow: 0 0 15px rgba(108, 99, 255, 0.2);
+}
