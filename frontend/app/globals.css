@@ -4,36 +4,40 @@
 
 @layer base {
   :root {
-    --background: 240 54% 6%; /* #070718 approx */
+    --background: 240 54% 6%;
+    /* #070718 approx */
     --foreground: 240 10% 90%;
-    
+
     --primary: 245 100% 69%;
     --primary-foreground: 0 0% 100%;
-    
+
     --secondary: 191 100% 50%;
     --secondary-foreground: 0 0% 100%;
-    
+
     --destructive: 349 100% 65%;
     --destructive-foreground: 0 0% 100%;
-    
+
     --success: 158 100% 50%;
     --success-foreground: 0 0% 100%;
 
     --muted: 240 10% 15%;
     --muted-foreground: 240 10% 70%;
-    
-    --border: 245 100% 69%;
+
+    --border: 214 32% 91%;
     --radius: 0.5rem;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
+
   body {
-    @apply bg-background text-foreground bg-cyber-gradient min-h-screen text-[#EAEAF0];
-    font-family: 'Inter', sans-serif;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    @apply bg-cyber-gradient min-h-screen;
+    font-family: "Inter", sans-serif;
   }
 }
 
