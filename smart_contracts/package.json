@@ -1,0 +1,16 @@
+{
+  "name": "scam-intelligence-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for Scam Intelligence Platform",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:amoy": "hardhat run scripts/deploy.js --network polygon_amoy",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network polygon_mainnet"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.1"
+  }
+}
